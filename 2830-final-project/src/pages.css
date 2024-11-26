@@ -1,8 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
-.login-title {
-    font-family: 'Poppins', sans-serif;
+.login-welcome {
+    font-family: 'Funnel Display', serif;
+    display: block;
+    color: red;
+    font-size: 30pt;
+    font-weight: 800;
+}
+
+.login-subtext {
+    font-family: 'Funnel Display', serif;
     display: block;
     font-weight: 500;
+    font-size: 15pt;
+}
 
+.login-label {
+    font-family: 'Funnel Display', serif;
+    display: block;
+    font-weight: 500;
+    color: rgb(130, 130, 130);
+    margin-left: 25px;
+}
+
+.login-entrybox {
+    min-width: 15em;
+    min-height: 2em;
+    margin-bottom: 15px;
+    margin-left: 25px;
 }

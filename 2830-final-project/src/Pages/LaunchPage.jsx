@@ -18,12 +18,12 @@ function LaunchPage({}){
             <p className='login-subtext'>Let's get you logged in.</p>
             
             <div className='login-field'>
-                <label className="login-label" for="un">Username</label>
-                <input name='un' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <label className="login-label" htmlFor="un">Username</label>
+                <input name='un' className='login-entrybox' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
             </div>
             <div className='login-field'>
-                <label className="login-label" for="pwd">Password</label>
-                <input name='pwd' type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <label className="login-label"  htmlFor="pwd">Password</label>
+                <input name='pwd' type="text" className='login-entrybox' value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
             <div className='login-field'>
                 <button type="submit" onClick={handleSubmit}>Submit</button>
