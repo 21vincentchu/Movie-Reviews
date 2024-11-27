@@ -1,10 +1,19 @@
-//import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import LaunchPage from './Pages/LaunchPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginPage from './Pages/LoginPage';
+
+
+// PUT THIS IN LATER
+//<Route path="/main" element={<MainPage/>} /> 
 
 function App(){
     
     return(
-        <LaunchPage/>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<LoginPage/>} />
+                
+            </Routes>
+        </BrowserRouter>
     )
 }
 

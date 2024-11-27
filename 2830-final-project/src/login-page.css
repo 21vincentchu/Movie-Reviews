@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+/*@import url('../public/background.svg');*/
 
 .login-welcome {
     font-family: 'Funnel Display', serif;
     display: block;
     color: red;
-    font-size: 30pt;
+    font-size: 40pt;
     font-weight: 800;
+    margin-bottom: 5px;
 }
 
 .login-subtext {
     font-family: 'Funnel Display', serif;
     display: block;
     font-weight: 500;
-    font-size: 15pt;
+    font-size: 20pt;
+    margin-top: 15px;
 }
 
 .login-label {
@@ -21,6 +24,7 @@
     font-weight: 500;
     color: rgb(130, 130, 130);
     margin-left: 25px;
+    font-size: 14pt;
 }
 
 .login-entrybox {
@@ -28,4 +32,10 @@
     min-height: 2em;
     margin-bottom: 15px;
     margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form {
+    margin-top: 50px;
 }
