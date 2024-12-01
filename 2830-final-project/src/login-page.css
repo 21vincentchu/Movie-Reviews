@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
-/*@import url('../public/background.svg');*/
+
+
 
 .login-welcome {
     font-family: 'Funnel Display', serif;
     display: block;
-    color: red;
+    color: rgb(255, 255, 255);
     font-size: 40pt;
     font-weight: 800;
     margin-bottom: 5px;
+    margin-left: 40px;
 }
 
 .login-subtext {
@@ -15,14 +17,16 @@
     display: block;
     font-weight: 500;
     font-size: 20pt;
+    color:rgb(213, 213, 213);
     margin-top: 15px;
+    margin-left: 60px;
 }
 
 .login-label {
     font-family: 'Funnel Display', serif;
     display: block;
     font-weight: 500;
-    color: rgb(130, 130, 130);
+    color: rgb(242, 242, 242);
     margin-left: 25px;
     font-size: 14pt;
 }
@@ -37,5 +41,47 @@
 }
 
 .login-form {
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+.circle-background {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 40%;
+    height: 1000px;
+    background-color: rgb(241, 50, 24);
+    border-radius: 00% 50% 50% 0%;
+    z-index: -1; /* Makes the rest of the content go in front of the circle */
+  }
+
+  .welcome-submit-button{
+    min-width: 10em;
+    min-height: 2em;
+    font-size: 11pt;
+    font-family: 'Funnel Display', serif;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-left: 45px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1; 
+  }
+
+  .error-message {
+    font-family: 'Funnel Display', serif;
+    display: block;
+    font-weight: 500;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    font-size: 14pt;
+    margin-top: 35px;
 }
