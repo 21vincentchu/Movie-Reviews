@@ -27,20 +27,38 @@
    git clone https://github.com/your-username/movie-review-app.git
    ```
 
-### Step 2: Navigate to the Project Directory
-activate your mysql server. please note, you will probably need to change the host, user, password, or database in the app.js 
-![img.png](img.png) 
-```bash
-mysql -u root -p
+### Step 2: Navigate to the Project Database
+Download MYsql
+
+### Step 2.1: Setting up your mysql
 ```
+make your username: "root"
+make your password: "root1234"
+```
+
+
 
 ### Step 3: Load the database into your mysql
 This will populate the database tables with the initial data from the seed.sql file.
-Make sure to replace [your_mysql_username] with your actual MySQL username. You may also be prompted to enter your MySQL password during the process.
+You will need to naviagate to the project folder db. Follow exactly the command lines below
+Make sure to replace root with your actual MySQL username. You may also be prompted to enter your MySQL password during the process.
 ```
+go to your ide command line
 
-mysql -u [your_mysql_username] -p < schema.sql
-mysql -u [your_mysql_username] -p < seed.sql
+ls 
+cd db 
+
+mysql -u root -p < schema.sql
+mysql -u root -p < seed.sql
+
+##########################
+log into your mysql to confirm the database
+mysql -u root -p
+#type password in 
+
+SHOW DATABASES;
+
+you should see the movie_review database in there
 ```
 
 ### Step 4: Install dependencies
