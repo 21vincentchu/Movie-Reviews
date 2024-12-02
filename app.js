@@ -44,6 +44,11 @@ app.get('/about', (req, res) => {
     res.render('about', { title: 'About Us' });
 });
 
+// Login Page Route
+app.get('/login', (req, res) => {
+    res.render('LoginPage', { title: 'Login' });
+});
+
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
