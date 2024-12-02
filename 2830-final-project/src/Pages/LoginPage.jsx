@@ -4,20 +4,20 @@ import '../login-page.css'
 function LoginPage({}){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');   
+    const [errorMessage, setErrorMessage] = useState('');
 
 
     const handleSubmit = ( event ) => {
-       event.preventDefault();
-       if(!username || !password){
+        event.preventDefault();
+        if(!username || !password){
             setErrorMessage('Please enter a Username and Password');
-       }
-       else{
-        console.log('Username:', username);
-        console.log('Password:', password);
-        setErrorMessage('');
-       }
-     };
+        }
+        else{
+            console.log('Username:', username);
+            console.log('Password:', password);
+            setErrorMessage('');
+        }
+    };
 
     return(
         <div>
