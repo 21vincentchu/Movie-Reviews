@@ -18,9 +18,13 @@ connection.connect((err) => {
     console.log('Connected to MySQL database successfully!');
 });
 
+// Set up view engine - make sure these come before your routes
+app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
+// Serve static files (for CSS)
+app.use(express.static('public'));
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -28,15 +32,38 @@ app.use((req, res, next) => {
     next();
 });
 
+// Root route handling both initial page load and search
 app.get('/', (req, res) => {
-    console.log('Fetching movies...');
     connection.query('SELECT * FROM movies', (err, movies) => {
         if (err) {
             console.error('Error fetching movies:', err);
             return res.status(500).send('Error fetching movies');
         }
-        console.log('Movies fetched:', movies);
         res.render('index', { movies: movies, title: 'Movie Review Site' });
+    });
+});
+
+// Add this new route for search
+app.get('/search', (req, res) => {
+    const searchQuery = req.query.search;
+
+    if (!searchQuery) {
+        return res.redirect('/');
+    }
+
+    const query = 'SELECT * FROM movies WHERE title LIKE ?';
+    const searchTerm = `%${searchQuery}%`;
+
+    connection.query(query, [searchTerm], (err, movies) => {
+        if (err) {
+            console.error('Error searching movies:', err);
+            return res.status(500).send('Error searching movies');
+        }
+        res.render('SearchResults', {
+            movies: movies,
+            searchTerm: searchQuery,
+            title: `Search Results for "${searchQuery}"`
+        });
     });
 });
 
