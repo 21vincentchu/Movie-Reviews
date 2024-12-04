@@ -36,8 +36,6 @@ make your username: "root"
 make your password: "root1234"
 ```
 
-
-
 ### Step 3: Load the database into your mysql
 This will populate the database tables with the initial data from the seed.sql file.
 You will need to naviagate to the project folder db. Follow exactly the command lines below
